@@ -1,0 +1,6 @@
+#!/bin/bash
+
+SEARCH=$(echo "" | dmenu -p "Duck-Duck-Go Search:")
+if [ ! -z "$SEARCH" ]; then
+	firefox --search "$SEARCH"
+fi

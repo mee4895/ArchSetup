@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ $(xbacklight -get | cut -d. -f1) -lt 5 ]; then
+	xbacklight -set 0.15
+else
+	xbacklight -dec 5
+fi
+
+notify-send -t 500 "Screen Brightness" -h int:value:$(xbacklight -get)

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+xrandr --auto
+arandr
+~/.fehbg
+notify-send -u low "Monitor Configuration Updated" "A new monitor configuration is now applied."

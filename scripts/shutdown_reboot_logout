@@ -1,0 +1,20 @@
+#!/bin/bash
+
+ACTION=$(printf "shutdown\nreboot\nlogout\nlock" | dmenu -p "Action:")
+
+if [ ! -z "$ACTION" ]; then
+	case "$ACTION" in
+	"shutdown")
+		sudo shutdown -h now
+		;;
+	"reboot")
+		sudo reboot
+		;;
+	"logout")
+		i3-msg exit
+		;;
+	"lock")
+		slock
+		;;
+	esac
+fi
